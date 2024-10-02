@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4a90e2, #6dd5ed); /* Blue background */
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.birthday-message {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff4b2b, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.memories {
+    margin-top: 30px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-gallery img {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+#cake-cutting-animation {
+    margin-top: 30px;
+}
+
+#cake-cutting-animation img {
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4b2b;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff7a6d;
+}
+
+#balloons {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    animation: fly 6s ease-in-out infinite;
+}
+
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Balloons */
+.balloon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;  /* Decreased size */
+    height: 150px; /* Decreased size */
+    background-image: url('loon.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 10%; 
+    animation: float 7s infinite ease-in-out;
+    margin-left: -108px;
+}
+
+
+@keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    100% { transform: translate(-50%, -50%) translateY(-100vh); }
+}
+
+
+/* Fireworks */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.photo-gallery {
+    position: relative;
+    overflow: hidden; /* Hide overflow for sliding effect */
+    height: 300px;
+    margin-left: 50px; /* Set height for the slideshow */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start off screen */
+    opacity: 0; /* Start hidden */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.slide.active {
+    left: 0; /* Slide in */
+    opacity: 1; /* Show */
+}
+
+.slide.exit {
+    left: -100%; /* Slide out */
+    opacity: 0; /* Hide */
+}

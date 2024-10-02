@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Happy Birthday Diya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-message">
+            <h1>Happy Birthday <span id="name">Diya</span>!</h1>
+            <p>
+                Diya, I know I couldn't be with you today to celebrate your special day in person, and it truly breaks my heart. But even though we're apart, I want you to know that you're always in my thoughts. 
+                Every moment with you has been a beautiful memory, and I cherish them more than words can express. 
+                I hope this little surprise makes you smile and reminds you how much you mean to me. 
+                Happy Birthday, Diya! Here's to creating many more unforgettable memories together. You deserve all the love and happiness in the world.
+            </p>
+            <div class="memories">
+                <div class="photo-gallery">
+                    <img class="slide" src="diu1.jpeg" alt="Memory 1">
+                    <img class="slide" src="diu2.jpeg" alt="Memory 2">
+                    <img class="slide" src="diu3.jpeg" alt="Memory 3">
+                    <img class="slide" src="diu4.jpeg" alt="Memory 4">
+                    <img class="slide" src="diu5.jpeg" alt="Memory 5">
+                </div>
+            </div>
+            <div id="cake-cutting-animation">
+                <img src="cake.png" id="whole-cake" alt="Cake">
+                <img src="cake1.png" id="cake-slice" alt="Cake Slice" style="display: none;">
+                <button id="cut-cake">Cut the Cake 🎂</button>
+                <button class="refresh-button" onclick="location.reload();">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="balloons" style="display: none;"></div>
+    <div id="fireworks"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
